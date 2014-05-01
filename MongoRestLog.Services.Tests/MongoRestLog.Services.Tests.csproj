@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DB2DFB4C-EE98-4641-B00D-C839F21031AB}</ProjectGuid>
+    <ProjectGuid>{44D8A8C0-49EC-4D65-A02A-D881EFF27DEA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MongoRestLog.Model.Tests</RootNamespace>
-    <AssemblyName>MongoRestLog.Model.Tests</AssemblyName>
+    <RootNamespace>MongoRestLog.Services.Tests</RootNamespace>
+    <AssemblyName>MongoRestLog.Services.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -35,12 +35,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MongoDB.Bson">
-      <HintPath>..\packages\mongocsharpdriver.1.9.0\lib\net35\MongoDB.Bson.dll</HintPath>
-    </Reference>
-    <Reference Include="MongoDB.Driver">
-      <HintPath>..\packages\mongocsharpdriver.1.9.0\lib\net35\MongoDB.Driver.dll</HintPath>
-    </Reference>
     <Reference Include="nunit.framework, Version=2.6.2.12296, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
     </Reference>
@@ -55,7 +49,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="LogEntryTests.cs" />
+    <Compile Include="Database\MongoRestLogDatabaseTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -65,6 +59,10 @@
     <ProjectReference Include="..\MongoRestLog.Model\MongoRestLog.Model.csproj">
       <Project>{333DFCF0-65A8-4EBB-9947-8648B14E535E}</Project>
       <Name>MongoRestLog.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MongoRestLog.Services\MongoRestLog.Services.csproj">
+      <Project>{E65DC31E-5105-418D-94A5-AEDF97CD180F}</Project>
+      <Name>MongoRestLog.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

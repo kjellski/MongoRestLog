@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoRestLog.Services", "Mo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoRestLog.Model.Tests", "MongoRestLog.Model.Tests\MongoRestLog.Model.Tests.csproj", "{DB2DFB4C-EE98-4641-B00D-C839F21031AB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoRestLog.Services.Tests", "MongoRestLog.Services.Tests\MongoRestLog.Services.Tests.csproj", "{44D8A8C0-49EC-4D65-A02A-D881EFF27DEA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{DB2DFB4C-EE98-4641-B00D-C839F21031AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB2DFB4C-EE98-4641-B00D-C839F21031AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB2DFB4C-EE98-4641-B00D-C839F21031AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44D8A8C0-49EC-4D65-A02A-D881EFF27DEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44D8A8C0-49EC-4D65-A02A-D881EFF27DEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44D8A8C0-49EC-4D65-A02A-D881EFF27DEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44D8A8C0-49EC-4D65-A02A-D881EFF27DEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

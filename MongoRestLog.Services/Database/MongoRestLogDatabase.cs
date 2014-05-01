@@ -6,7 +6,7 @@ using MongoRestLog.Services.Properties;
 
 namespace MongoRestLog.Services.Database
 {
-    internal class MongoRestLogDatabase : IMongoRestLogDatabase
+    public class MongoRestLogDatabase : IMongoRestLogDatabase
     {
         private readonly MongoDatabase _db;
 
@@ -21,8 +21,19 @@ namespace MongoRestLog.Services.Database
 
         public MongoCollection<TCollectionModel> GetCollection<TCollectionModel>()
         {
+            return _db.GetCollection<TCollectionModel>(ReflectCollectionName<TCollectionModel>());
+        }
+
+        private static string ReflectCollectionName<TCollectionModel>()
+        {
             var collectionName = typeof (TCollectionModel).Name.ToLower();
-            return _db.GetCollection<TCollectionModel>(collectionName);
+            return collectionName;
+        }
+
+        public bool Save<TCollectionModel>(TCollectionModel instanceToBeSaved)
+        {
+            var result = _db.GetCollection<TCollectionModel>(ReflectCollectionName<TCollectionModel>()).Save(instanceToBeSaved);
+            return result.Ok;
         }
 
         public String GetServerStats()

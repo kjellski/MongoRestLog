@@ -1,21 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Configuration;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Reflection;
 using Autofac;
-using Autofac.Core;
+using MongoRestLog.Services.Database;
+using Module = Autofac.Module;
 
 namespace MongoRestLog.Services
 {
-    public class ServicesModule : Autofac.Module
+    public class ServicesModule : Module
     {
         protected override void Load(ContainerBuilder builder)
         {
             base.Load(builder);
-            builder.RegisterAssemblyTypes(Assembly.GetAssembly(typeof(ServicesModule)))
+            builder.RegisterAssemblyTypes(Assembly.GetAssembly(typeof (ServicesModule)))
                 .Where(t => t.Name.EndsWith("Service"))
                 .AsImplementedInterfaces();
             builder.RegisterType<MongoRestLogDatabase>().As<IMongoRestLogDatabase>();

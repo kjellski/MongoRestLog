@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 
-[assembly: AssemblyTitle("MongoRestLog.Model")]
+[assembly: AssemblyTitle("MongoRestLog.Model.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MongoRestLog.Model")]
+[assembly: AssemblyProduct("MongoRestLog.Model.Tests")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -22,7 +22,7 @@ using System.Runtime.InteropServices;
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 
-[assembly: Guid("b29c996b-39c4-4a15-83ed-b062cc95cbcc")]
+[assembly: Guid("5c44c7cc-ff67-444f-9b5c-cca5b50768bf")]
 
 // Version information for an assembly consists of the following four values:
 //

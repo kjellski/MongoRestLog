@@ -1,20 +1,18 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <title>MongoRestLog</title>
+    <head>
+        <meta charset="utf-8" />
+        <title>MongoRestLog</title>
 
-    <style type="text/css">
+        <style type="text/css">
 
-        body {
-            text-align: center;
-        }
+            body { text-align: center; }
 
-    </style>
+        </style>
 
-</head>
-<body>
-    <img src="@Path['~/Content/nancy-logo.png']" alt="Nancy logo" /><br />
-    This view was rendered using the SuperSimpleViewEngine
-</body>
+    </head>
+    <body>
+        <img src="@Path['~/Content/nancy-logo.png']" alt="Nancy logo" /><br />
+        This view was rendered using the SuperSimpleViewEngine
+    </body>
 </html>

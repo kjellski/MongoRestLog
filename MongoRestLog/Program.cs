@@ -1,11 +1,11 @@
-﻿namespace MongoRestLog
-{
-    using System;
-    using Nancy.Hosting.Self;
+﻿using System;
+using Nancy.Hosting.Self;
 
-    class Program
+namespace MongoRestLog
+{
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             var uri =
                 new Uri("http://localhost:3579/");

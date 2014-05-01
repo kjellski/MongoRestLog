@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MongoRestLog.Model;
+using MongoRestLog.Services.Database;
 
-namespace MongoRestLog.Services
+namespace MongoRestLog.Services.Implementation
 {
     public class LogEntryService : ILogEntryService
     {

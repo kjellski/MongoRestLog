@@ -1,12 +1,10 @@
-﻿
-using Autofac;
+﻿using Autofac;
 using MongoRestLog.Services;
+using Nancy;
 using Nancy.Bootstrappers.Autofac;
 
-namespace MongoRestLog
+namespace MongoRestLog.Setup
 {
-    using Nancy;
-
     public class Bootstrapper : AutofacNancyBootstrapper
     {
         // The bootstrapper enables you to reconfigure the composition of the framework,

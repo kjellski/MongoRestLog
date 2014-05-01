@@ -10,6 +10,7 @@
             var uri =
                 new Uri("http://localhost:3579/");
 
+
             using (var host = new NancyHost(uri))
             {
                 host.Start();

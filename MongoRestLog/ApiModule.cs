@@ -1,5 +1,4 @@
-﻿using System.Threading;
-using MongoDB.Driver;
+﻿using MongoRestLog.Services;
 
 namespace MongoRestLog
 {
@@ -7,18 +6,15 @@ namespace MongoRestLog
 
     public class ApiModule : NancyModule
     {
-        public ApiModule()
-        {
-            //var client = new MongoClient(Properties.Settings.Default.MongoRestLogConnectionString);
-            //var server = client.GetServer();
-            //var db = server.GetDatabase(Properties.Settings.Default.MongoRestLogDatabaseName);
+        private readonly IMongoRestLogDatabase _db;
 
+        public ApiModule(IMongoRestLogDatabase db)
+        {
+            _db = db;
 
             Get["/api"] = parameters =>
             {
-                //db.GetStats();
-                //return db.Server.BuildInfo;
-                return "/api/";
+                return _db.GetServerStats();
             };
         }
     }

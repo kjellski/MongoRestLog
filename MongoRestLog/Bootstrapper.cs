@@ -1,9 +1,13 @@
 ﻿
+using Autofac;
+using MongoRestLog.Services;
+using Nancy.Bootstrappers.Autofac;
+
 namespace MongoRestLog
 {
     using Nancy;
 
-    public class Bootstrapper : DefaultNancyBootstrapper
+    public class Bootstrapper : AutofacNancyBootstrapper
     {
         // The bootstrapper enables you to reconfigure the composition of the framework,
         // by overriding the various methods and properties.
@@ -20,13 +24,13 @@ namespace MongoRestLog
         //    // Perform registration that should have an application lifetime
         //}
 
-        //protected override void ConfigureRequestContainer(ILifetimeScope container, NancyContext context)
-        //{
-        //    // Perform registrations that should have a request lifetime
-        //    var builder = new ContainerBuilder();
-        //    //builder.RegisterType<>();
-        //    builder.Update(container.ComponentRegistry);
-        //}
+        protected override void ConfigureRequestContainer(ILifetimeScope container, NancyContext context)
+        {
+            // Perform registrations that should have a request lifetime
+            var builder = new ContainerBuilder();
+            builder.RegisterModule(new ServicesModule());
+            builder.Update(container.ComponentRegistry);
+        }
 
         //protected override void RequestStartup(ILifetimeScope container, IPipelines pipelines, NancyContext context)
         //{

@@ -1,4 +1,6 @@
-﻿using Nancy;
+﻿using System;
+using MongoRestLog.Modules;
+using Nancy;
 using Nancy.Testing;
 using NUnit.Framework;
 
@@ -7,14 +9,14 @@ namespace MongoRestLog.Tests.Modules
     [TestFixture]
     public class ResourceModuleTests
     {
-        private readonly DefaultNancyBootstrapper _bootstrapper = new DefaultNancyBootstrapper();
-        private Browser _browser;
-
         [SetUp]
         public void SetUp()
         {
-            _browser = new Browser(_bootstrapper);
+            _browser = new Browser(with => with.Module<ResourceModule<Foo>>());
         }
+
+        private readonly DefaultNancyBootstrapper _bootstrapper = new DefaultNancyBootstrapper();
+        private Browser _browser;
 
         [Test]
         public void GetShouldReturnOk()
@@ -26,5 +28,10 @@ namespace MongoRestLog.Tests.Modules
             // assert
             Assert.That(HttpStatusCode.OK, Is.EqualTo(result.StatusCode));
         }
+    }
+
+    public class Foo
+    {
+        public readonly Guid Guid = Guid.NewGuid();
     }
 }

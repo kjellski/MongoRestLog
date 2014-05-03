@@ -67,6 +67,7 @@
   <ItemGroup>
     <Compile Include="Modules\ApiModule.cs" />
     <Compile Include="Modules\ResourceModule.cs" />
+    <Compile Include="Modules\ResourcePaths.cs" />
     <Compile Include="Setup\Bootstrapper.cs" />
     <Compile Include="Modules\IndexModule.cs" />
     <Compile Include="Program.cs" />
